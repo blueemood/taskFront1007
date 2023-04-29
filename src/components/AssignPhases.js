@@ -108,7 +108,7 @@ const AssignPhases = ({projectData}) => {
     const handleAssignPhases = async (e) =>{
         let projectId = e.target.id;
         try {
-            const response = await fetch('/assignProjectPhases', {
+            const response = await fetch('http://localhost:5000/assignProjectPhases', {
                 method: 'POST',
                 headers: {
                     'Content-Type' : 'application/json' 
@@ -137,7 +137,7 @@ const AssignPhases = ({projectData}) => {
                 let selectedProjectId = projectData.currentProject._id;
                 let selectedProjectCreator = projectData.currentProject.projectCreator;
 
-                const response = await fetch('/showProjectPhases', {
+                const response = await fetch('http://localhost:5000/showProjectPhases', {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json' 
@@ -184,7 +184,7 @@ const AssignPhases = ({projectData}) => {
     const handleUpdatePhaseBtn = async () =>{
         if(selectedphaseForUpdate){
             try {
-                const response = await fetch('/updatePhaseToCompleted', {
+                const response = await fetch('http://localhost:5000/updatePhaseToCompleted', {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json' 
@@ -210,7 +210,7 @@ const AssignPhases = ({projectData}) => {
 
         if(selectedphaseForUpdate){
             try {
-                const response = await fetch('/updatePhaseToPending', {
+                const response = await fetch('http://localhost:5000/updatePhaseToPending', {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json' 

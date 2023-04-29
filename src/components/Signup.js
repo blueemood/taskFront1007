@@ -49,7 +49,7 @@ const Signup = () => {
         const jwtIDToken = response.credential;
 
         try{
-            const res = await fetch("/googleSignIn", { 
+            const res = await fetch("http://localhost:5000/googleSignIn", { 
                 method: "POST",
                 headers:{
                     "Content-Type" : "application/json"                
@@ -75,7 +75,7 @@ const Signup = () => {
     useEffect( () => {
         /*global google*/
         google.accounts.id.initialize({
-            client_id: "71679309628-pt4a93103j2iiiorhcqhkq9thcua5vvl.apps.googleusercontent.com",
+            client_id: "564873804785-l5h8sv9j4kqgrsldpfgcdqarmkqqm75n.apps.googleusercontent.com",
             callback: handleResponce
         });
 
@@ -94,7 +94,7 @@ const Signup = () => {
 
         if(userEmail && userPassword){
             try {
-                const response = await fetch('/signInUser', {
+                const response = await fetch('http://localhost:5000/signInUser', {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json' 
@@ -155,7 +155,7 @@ const Signup = () => {
             formData.append('userImage', userImage);
             
             try {
-                const response = await fetch("/createNewUser", {
+                const response = await fetch("http://localhost:5000/createNewUser", {
                     method: "POST",
                     body: formData
                       

@@ -33,7 +33,7 @@ const UpdateNotes = ({noteData}) => {
         e.preventDefault();
         if(noteTitle && noteText){
             try {
-                const response = await fetch('/updateCurrentNote', {
+                const response = await fetch('http://localhost:5000/updateCurrentNote', {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json' 

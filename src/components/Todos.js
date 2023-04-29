@@ -24,7 +24,7 @@ const SideNavbar = () => {
 
   const showTasks = async () => {
     try {
-      const response = await fetch('/showTasks', {
+      const response = await fetch('http://localhost:5000/showTasks', {
         method: 'GET',
       });
 

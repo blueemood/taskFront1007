@@ -44,7 +44,7 @@ const Messages = () => {
 
     const getAllChats = async () =>{
         try {
-            const response = await fetch('/allGroupChats', {
+            const response = await fetch('http://localhost:5000/allGroupChats', {
                 method: 'GET',
             })
 
@@ -62,7 +62,7 @@ const Messages = () => {
 
     const getFriends = async () =>{
         try {
-            const response = await fetch('/getFriends', {
+            const response = await fetch('http://localhost:5000/getFriends', {
                 method: 'GET',
             })
 
@@ -101,7 +101,7 @@ const Messages = () => {
         setSmShowGroup(true);
 
         try { 
-            const response = await fetch('/getAllGroupMsgs', {  
+            const response = await fetch('http://localhost:5000/getAllGroupMsgs', {  
                 method: 'POST',
                 headers: {
                     'Content-Type' : 'application/json' 
@@ -134,7 +134,7 @@ const Messages = () => {
         setSmShow(true);
 
         try {
-            const response = await fetch('/getAllMsgs', {  
+            const response = await fetch('http://localhost:5000/getAllMsgs', {  
                 method: 'POST',
                 headers: {
                     'Content-Type' : 'application/json' 
@@ -164,7 +164,7 @@ const Messages = () => {
     const handleKeyDown = async (e) =>{
         if(e.keyCode === 13 && selectedId){
             try {
-                const response = await fetch('/sendingMsg', {
+                const response = await fetch('http://localhost:5000/sendingMsg', {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json' 
@@ -188,7 +188,7 @@ const Messages = () => {
     const handleSendBtn = async () =>{
 
         try {
-            const response = await fetch('/sendingMsg', {
+            const response = await fetch('http://localhost:5000/sendingMsg', {
                 method: 'POST',
                 headers: {
                     'Content-Type' : 'application/json' 
@@ -212,7 +212,7 @@ const Messages = () => {
     const handleKeyDownGroup = async (e) =>{
         if(e.keyCode === 13 && selectedId){
             try {
-                const response = await fetch('/sendingGroupMsg', {
+                const response = await fetch('http://localhost:5000/sendingGroupMsg', {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json' 
@@ -235,7 +235,7 @@ const Messages = () => {
 
     const handleSendGroupBtn = async () =>{
         try {
-            const response = await fetch('/sendingGroupMsg', {
+            const response = await fetch('http://localhost:5000/sendingGroupMsg', {
                 method: 'POST',
                 headers: {
                     'Content-Type' : 'application/json' 

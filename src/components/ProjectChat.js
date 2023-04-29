@@ -14,7 +14,7 @@ const ProjectChat = ({projectData}) => {
         let selectedProjectId = e.target.id;
 
         try {
-            const response = await fetch('/createProjectChat', {
+            const response = await fetch('http://localhost:5000/createProjectChat', {
                 method: 'POST',
                 headers: {
                     'Content-Type' : 'application/json' 
