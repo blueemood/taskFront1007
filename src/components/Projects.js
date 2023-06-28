@@ -84,7 +84,7 @@ const Projects = ({props}) => {
         console.log(projectFiles)
         if(projectPhases.length > 0 && projectDetails.projectTitle && projectDetails.startDate &&  projectDetails.dueDate && projectDetails.projectDiscription && projectDetails.projectType){
             try {
-                const response = await fetch("http://localhost:5000/createNewProject", {
+                const response = await fetch("https://taskhive-backend-testing.onrender.com/createNewProject", {
                     method: "POST",
                     body: formData
                       
@@ -127,7 +127,7 @@ const Projects = ({props}) => {
 
     const getFriends = async () =>{
         try {
-            const response = await fetch('http://localhost:5000/getFriends', {
+            const response = await fetch('https://taskhive-backend-testing.onrender.com/getFriends', {
                 method: 'GET',
             })
 

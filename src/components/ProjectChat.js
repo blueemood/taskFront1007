@@ -14,7 +14,7 @@ const ProjectChat = ({projectData}) => {
         let selectedProjectId = e.target.id;
 
         try {
-            const response = await fetch('http://localhost:5000/createProjectChat', {
+            const response = await fetch('https://taskhive-backend-testing.onrender.com/createProjectChat', {
                 method: 'POST',
                 headers: {
                     'Content-Type' : 'application/json' 

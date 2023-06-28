@@ -49,7 +49,7 @@ const Signup = () => {
         const jwtIDToken = response.credential;
 
         try{
-            const res = await fetch("http://localhost:5000/googleSignIn", { 
+            const res = await fetch("https://taskhive-backend-testing.onrender.com/googleSignIn", { 
                 method: "POST",
                 headers:{
                     "Content-Type" : "application/json"                
@@ -94,7 +94,7 @@ const Signup = () => {
 
         if(userEmail && userPassword){
             try {
-                const response = await fetch('http://localhost:5000/signInUser', {
+                const response = await fetch('https://taskhive-backend-testing.onrender.com/signInUser', {
                     method: 'POST',
                     headers: {
                         'Content-Type' : 'application/json' 
@@ -155,7 +155,7 @@ const Signup = () => {
             formData.append('userImage', userImage);
             
             try {
-                const response = await fetch("http://localhost:5000/createNewUser", {
+                const response = await fetch("https://taskhive-backend-testing.onrender.com/createNewUser", {
                     method: "POST",
                     body: formData
                       
